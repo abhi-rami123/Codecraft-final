@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1>My To-Do App</h1>
+      <div class="user-profile">
+        <span class="avatar-placeholder" role="img" aria-label="User">👤</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <aside class="sidebar">
+      <h2>Projects</h2>
+      <ul id="category-list" class="category-list"></ul>
+      <form id="add-category-form">
+        <input type="text" id="new-category" placeholder="New category" required />
+        <button type="submit">Add Category</button>
+      </form>
+    </aside>
+
+    <section class="task-area">
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="What needs to be done?" required />
+        <select id="category-select" required></select>
+        <button type="submit">Add Task</button>
+      </form>
+
+      <ul id="task-list" class="task-list"></ul>
+
+      <div class="task-summary">
+        <p><span id="task-count">0</span> tasks shown, <span id="completed-count">0</span> completed</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <ul class="footer-links">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+  </html>
