@@ -1,0 +1,181 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #e0e0e0;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Glassmorphism effect */
+.main-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.sidebar, .task-area {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sidebar:hover, .task-area:hover {
+  transform: translateY(-5px);
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 255, 255, 0.4);
+}
+
+.user-profile {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Task and Category lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 0.7rem;
+  padding: 1rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,255,255,0.1);
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+}
+
+.task-desc {
+  flex: 1;
+  font-weight: bold;
+  color: #fff;
+}
+
+.task-category, .due-date, .priority {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Priority indicators */
+.priority.high { color: #ff6b6b; }
+.priority.medium { color: #f9ca24; }
+.priority.low { color: #6ab04c; }
+
+.task-actions button {
+  background: none;
+  border: none;
+  color: #00ffff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.task-actions button:hover {
+  color: #ffffff;
+}
+
+/* Forms */
+form {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+input, select, button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+input, select {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  background: #00ffff;
+  color: #0f2027;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #00cccc;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0.5rem 0;
+}
+.footer-links a {
+  color: #00ffff;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+    }
